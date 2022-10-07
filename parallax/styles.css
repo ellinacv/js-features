@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+html {
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+}
+
+.scene {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  min-height: 100vh;
+
+  z-index: -1;
+}
+
+.layer {
+  position: absolute;
+  left: -20%;
+  top: 0;
+  width: 120%;
+  height: 100%;
+}
+
+.layer-bg {
+  background: url(./img/layer-bg.png) center no-repeat;
+  background-size: cover;
+}
+
+.layer-1 {
+  background: url(./img/layer-1.png) center no-repeat;
+  background-size: cover;
+}
+
+.layer-2 {
+  background: url(./img/layer-2.png) center no-repeat;
+  background-size: cover;
+}
+.layer-3 {
+  background: url(./img/layer-3.png) center no-repeat;
+  background-size: cover;
+}
+
+.layer-5 {
+  background: url(./img/l.png) center no-repeat;
+  background-size: cover;
+
+  opacity: .5;
+}
+
+.header {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+}
+
+.scene__title {
+  text-shadow:
+      0 0 7px #fff,
+      0 0 42px rgb(252, 212, 252),
+      0 0 82px rgb(194, 111, 194),
+      0 0 92px rgb(252, 212, 252),
+      0 0 102px rgb(252, 212, 252),
+      0 0 151px rgb(252, 212, 252);
+}
+
+.animate-img {
+  animation: appear 3s linear;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity:.3;
+  }
+  /* 50% {
+    opacity: .5;
+  }
+  75 {
+    opacity:.3;
+  }
+  100% {
+    opacity: .2;
+  } */
+}
