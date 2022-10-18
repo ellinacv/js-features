@@ -23,7 +23,6 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: aqua;
 }
 
 .block h2, 
