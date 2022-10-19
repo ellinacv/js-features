@@ -17,6 +17,8 @@ document.addEventListener('click', event => {
 
     node.classList.toggle('fa-lock-open')
     node.classList.toggle('fa-lock')
+  } else if (type === 'copy') {
+    copyToClickboard(event.target.textContent)
   }
 })
 
@@ -28,6 +30,10 @@ function generateRandomColor() {
     color += hexCodes[Math.floor(Math.random() * hexCodes.length)]
   }
   return '#' + color
+}
+
+function copyToClickboard(text) {
+  return navigator.clipboard.writeText(text)
 }
 
 function setColors() {
@@ -53,6 +59,8 @@ function setElementTextColor(element, color) {
   const luminance = chroma(color).luminance()
   element.style.color = luminance > 0.5 ? 'black' : 'white'
 }
+
+
 
 window.addEventListener('DOMContentLoaded', () => {
   setColors()
